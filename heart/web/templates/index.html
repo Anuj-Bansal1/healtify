@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head><title>healthify score</title></head>
+    <body>
+        <form action = "{{ url_for('predict')}}"method='post'>
+            
+                <div class="form-group">
+                  <label for="your age">Your Age :</label>
+                  <input type="text" class="form-control" name="your age" placeholder="--your age--">
+                </div><br><br>
+                <div class="form-group">
+                  <label for="heart disease">Ever had any heart disease ?</label>
+                  <select class="form-control" id="exampleFormControlSelect1" name="heart disease">
+                    <option value="1">--yes--</option>
+                    <option value="0">--no--</option>
+                  </select>
+                </div><br><br>
+                <div class="form-group">
+                    <label for="glucose level">glucose level avg:</label>
+                    <input type="text" class="form-control"  name="glucose level" placeholder="--glucose level--">
+                </div><br><br>
+                <div class="form-group">
+                    <label for="bmi">your BMI:</label>
+                    <input type="text" class="form-control" name="bmi"  placeholder="--bmi--">
+                </div><br><br>
+                <div class="form-group">
+                    <label for="smoking status">your smoking status :</label>
+                    <select class="form-control" id="exampleFormControlSelect1" name="smoking status">
+                      <option value="1">--formerly smoked--</option>
+                      <option value="3">--never smoked	--</option>
+                      <option value="2">--smokes--</option>
+                    </select>
+                  </div><br><br>
+                <div class="form-group">
+                    <label for="gender">your gender :</label>
+                    <select class="form-control" id="exampleFormControlSelect1" name="gender">
+                      <option value="1">--male--</option>
+                      <option value="0">--female--</option>
+                    </select>
+                </div><br><br>
+                <input type="submit">
+            </form>
+      <br><br><h4>
+      {{ prediction_text }}</h4>
+    </body>
+    
+</html>
